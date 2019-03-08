@@ -64,7 +64,8 @@ namespace ExcelApplication1
 
                             if (!string.IsNullOrEmpty(code))
                             {
-                                writer.WriteLine("insert  into `iprize_code`(`_id`,`prize_id`,`code`,`pwd`,`is_used`,`start_time`,`end_time`,`__CREATE_TIME__`,`__MODIFY_TIME__`,`__REMOVED__`) values ('{0}','{1}','{2}','{3}',{4},'{5}','{6}','{7}','{8}',0);", _id, prize_id, code, pwd, is_used, start_time, end_time, __CREATE_TIME__, __MODIFY_TIME__);
+                                //writer.WriteLine("insert  into `iprize_code`(`_id`,`prize_id`,`code`,`pwd`,`is_used`,`start_time`,`end_time`,`__CREATE_TIME__`,`__MODIFY_TIME__`,`__REMOVED__`) values ('{0}','{1}','{2}','{3}',{4},'{5}','{6}','{7}','{8}',0);", _id, prize_id, code, pwd, is_used, start_time, end_time, __CREATE_TIME__, __MODIFY_TIME__);
+                                writer.WriteLine("insert  into `iprize_code`(`gift_id`,`code`,`is_activited`,`is_used`,`start_at`,`end_at`,`use_start_at`,`use_end_at`,`created_at`,`updated_at`) values ('{0}','{1}','{2}','{3}',{4},'{5}','{6}','{7}','{8}','{9}');", prize_id, code, 1, is_used, start_time, end_time, start_time, end_time, __CREATE_TIME__, __MODIFY_TIME__);
                             }
                         }
 
